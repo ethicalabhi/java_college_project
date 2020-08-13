@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ERDiagram version="1.1">
+  <Connection session="oracle.jdbc.driver.OracleDriver" database="PAYS" />
+  <Drawing gridVisible="false" snapOn="false" fastRouting="false" labelsVisible="true" />
+  <Tables>
+    <Table name="ACCOUNTDETAILS">
+      <Drawing expanded="true" location="2818,258" dimensions="184,148" />
+      <Columns>
+        <Column name="ACCNO" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="ACCTYPE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="USERID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="BANK" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="ACCBAL" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="FLOAT" size="126" />
+        </Column>
+        <Column name="ACDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="ADDRESSES">
+      <Drawing expanded="true" location="1868,238" dimensions="196,187" />
+      <Columns>
+        <Column name="USERIDREF" primary_key="true" foreign_key="true" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="HOUSENO" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="STREET" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="CITY" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="STATE" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="COUNTRY" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="PINCODE" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="10" />
+        </Column>
+        <Column name="PHNO" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="15" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="ANNOUNCEMENT">
+      <Drawing expanded="true" location="3397,268" dimensions="216,127" />
+      <Columns>
+        <Column name="AID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="COURSEID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="USERID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DESCRIPTION" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="200" />
+        </Column>
+        <Column name="ADATE" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="BRANCH">
+      <Drawing expanded="true" location="242,1388" dimensions="221,89" />
+      <Columns>
+        <Column name="BRANCHID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="BRANCHNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="DESCRIPTION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="100" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="COURSE">
+      <Drawing expanded="true" location="1034,1174" dimensions="214,169" />
+      <Columns>
+        <Column name="COURSEID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="CNAME" primary_key="false" foreign_key="false" required="true" unique="true">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="CDESCRIPTION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="CFEE" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="CDURATION" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="CDATE" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="CSTATUS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="COURSEDETAILS">
+      <Drawing expanded="true" location="3102,278" dimensions="195,107" />
+      <Columns>
+        <Column name="CDID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="COURSEIDREF" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="USERIDREF" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="JDATE" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="DEPARTMENT">
+      <Drawing expanded="true" location="508,1388" dimensions="216,89" />
+      <Columns>
+        <Column name="DEPTID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DEPARTNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="DESCRIPTION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="100" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="EXAMSCHEDULE">
+      <Drawing expanded="true" location="0,228" dimensions="212,207" />
+      <Columns>
+        <Column name="EXAMID" primary_key="false" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="EXAMTITLE" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="COURSEIDREF" primary_key="true" foreign_key="true" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="SUBJIDREF" primary_key="true" foreign_key="true" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="ETYPE" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="TMARKS" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="EXAMDATE" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="DAY" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="TIME" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="FACULTYSUBJECT">
+      <Drawing expanded="true" location="1574,288" dimensions="194,88" />
+      <Columns>
+        <Column name="SNO" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="FACULTYID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="SUBJECT" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="FEDDBACK">
+      <Drawing expanded="true" location="0,1388" dimensions="197,149" />
+      <Columns>
+        <Column name="FID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="FEEDBACK" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="100" />
+        </Column>
+        <Column name="NAME" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="CONTACT" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="15" />
+        </Column>
+        <Column name="EMAIL" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="FDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="FEEINFO">
+      <Drawing expanded="true" location="1048,766" dimensions="195,228" />
+      <Columns>
+        <Column name="FEEID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="COURSEIDREF" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="AF" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="FLOAT" size="126" />
+        </Column>
+        <Column name="EF" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="FLOAT" size="126" />
+        </Column>
+        <Column name="LF" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="FLOAT" size="126" />
+        </Column>
+        <Column name="PF" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="FLOAT" size="126" />
+        </Column>
+        <Column name="TF" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="FLOAT" size="126" />
+        </Column>
+        <Column name="HF" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="FLOAT" size="126" />
+        </Column>
+        <Column name="LASTDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="TOTALFEE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="FLOAT" size="126" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="INBOX_MAILS">
+      <Drawing expanded="true" location="944,258" dimensions="211,147" />
+      <Columns>
+        <Column name="MESSAGEID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="FROMMAILID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="TOMAILID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="MAILSUB" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="MAILBODY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="500" />
+        </Column>
+        <Column name="MAILDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="INBOX_MAIL_ATTACHMENT">
+      <Drawing expanded="true" location="924,10" dimensions="252,108" />
+      <Columns>
+        <Column name="ATTACHMENTID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="ATTACHMENTMAILID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="ATTACHMENTDATA" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="BLOB" size="4000" />
+        </Column>
+        <Column name="FILETYPE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="MARKS">
+      <Drawing expanded="true" location="625,248" dimensions="220,168" />
+      <Columns>
+        <Column name="EXAMID" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="USERID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="SMARKS" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="RDATE" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="SUBJID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="PASSPERCENTAGE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="AVERAGE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="OUTBOX_MAILS">
+      <Drawing expanded="true" location="2482,258" dimensions="211,147" />
+      <Columns>
+        <Column name="MESSAGEID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="FROMMAILID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="TOMAILID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="MAILSUB" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="MAILBODY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="500" />
+        </Column>
+        <Column name="MAILDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="OUTBOX_MAIL_ATTACHMENT">
+      <Drawing expanded="true" location="2462,10" dimensions="252,108" />
+      <Columns>
+        <Column name="ATTACHMENTID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="ATTACHMENTMAILID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="ATTACHMENTDATA" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="BLOB" size="4000" />
+        </Column>
+        <Column name="FILETYPE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="QPAPER">
+      <Drawing expanded="true" location="312,239" dimensions="213,186" />
+      <Columns>
+        <Column name="PID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="COURSEIDREF" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="SUBJIDREF" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="USERIDREF" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="EXAMDATE" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="PAPER" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="BLOB" size="4000" />
+        </Column>
+        <Column name="PDATE" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="DESCRIPTION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="100" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="QUERY">
+      <Drawing expanded="true" location="2164,258" dimensions="196,148" />
+      <Columns>
+        <Column name="QUERYID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="QUERYTO" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="USERIDREF" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="QUERY" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="200" />
+        </Column>
+        <Column name="QSTATUS" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="QDATE" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="SOLUTION">
+      <Drawing expanded="true" location="2162,19" dimensions="200,89" />
+      <Columns>
+        <Column name="QUERYIDREF" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="SOLDATE" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="SOLUTION" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="STUDENTFEERECORD">
+      <Drawing expanded="true" location="1256,228" dimensions="218,208" />
+      <Columns>
+        <Column name="SFRID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="STUDENTID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="STUDENTNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="COURSE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="TOTALFEE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="FLOAT" size="126" />
+        </Column>
+        <Column name="PAIDFEE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="FLOAT" size="126" />
+        </Column>
+        <Column name="DUEFEE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="FLOAT" size="126" />
+        </Column>
+        <Column name="PAYDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="BRANCH" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="SUBJECT">
+      <Drawing expanded="true" location="207,816" dimensions="217,128" />
+      <Columns>
+        <Column name="SUBJID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="COURSEIDREF" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="SUBNAME" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="40" />
+        </Column>
+        <Column name="SDESCRIPTION" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="SDATE" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="TRANSACTION">
+      <Drawing expanded="true" location="2814,0" dimensions="192,128" />
+      <Columns>
+        <Column name="TRANSID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="ACCNO" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="TTYPE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="TAMOUNT" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="FLOAT" size="126" />
+        </Column>
+        <Column name="TDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="USERDETAILS">
+      <Drawing expanded="true" location="1866,706" dimensions="200,348" />
+      <Columns>
+        <Column name="USERID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="FIRSTNAME" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="LASTNAME" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="DOB" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="DOR" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="LOGINID" primary_key="false" foreign_key="false" required="true" unique="true">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="PASSWORD" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="LOGINTYPE" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="SQUESTION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="70" />
+        </Column>
+        <Column name="SANSWER" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="70" />
+        </Column>
+        <Column name="PHOTO" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="BLOB" size="4000" />
+        </Column>
+        <Column name="EMAILID" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="BUS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="HOSTEL" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="COURSEID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="BRANCHID" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+      </Columns>
+    </Table>
+  </Tables>
+  <Relationships>
+    <Relationship name="ACCOUNTDETAILS_R01">
+      <Details primary_table="USERDETAILS" foreign_table="ACCOUNTDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="USERID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="USERID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="UERID_FK">
+      <Details primary_table="USERDETAILS" foreign_table="ADDRESSES">
+        <PrimaryKeys>
+          <ColumnName name="USERID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="USERIDREF" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="AID_CID_FK">
+      <Details primary_table="COURSE" foreign_table="ANNOUNCEMENT">
+        <PrimaryKeys>
+          <ColumnName name="COURSEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="COURSEID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="A_USERID_FK">
+      <Details primary_table="USERDETAILS" foreign_table="ANNOUNCEMENT">
+        <PrimaryKeys>
+          <ColumnName name="USERID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="USERID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="CUSER_FK">
+      <Details primary_table="USERDETAILS" foreign_table="COURSEDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="USERID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="USERIDREF" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="CID_PCID_FK">
+      <Details primary_table="COURSE" foreign_table="COURSEDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="COURSEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="COURSEIDREF" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="EID_SID_FK">
+      <Details primary_table="SUBJECT" foreign_table="EXAMSCHEDULE">
+        <PrimaryKeys>
+          <ColumnName name="SUBJID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="SUBJIDREF" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="EID_CID_FK">
+      <Details primary_table="COURSE" foreign_table="EXAMSCHEDULE">
+        <PrimaryKeys>
+          <ColumnName name="COURSEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="COURSEIDREF" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="SYS_C004328">
+      <Details primary_table="USERDETAILS" foreign_table="FACULTYSUBJECT">
+        <PrimaryKeys>
+          <ColumnName name="USERID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="FACULTYID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FEEINFO_R01">
+      <Details primary_table="COURSE" foreign_table="FEEINFO">
+        <PrimaryKeys>
+          <ColumnName name="COURSEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="COURSEIDREF" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="AAA">
+      <Details primary_table="USERDETAILS" foreign_table="INBOX_MAILS">
+        <PrimaryKeys>
+          <ColumnName name="USERID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="TOMAILID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="INBOX_MAILS_R01">
+      <Details primary_table="USERDETAILS" foreign_table="INBOX_MAILS">
+        <PrimaryKeys>
+          <ColumnName name="USERID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="FROMMAILID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="INBOX_MAIL_ATTACHMENT_R01">
+      <Details primary_table="INBOX_MAILS" foreign_table="INBOX_MAIL_ATTACHMENT">
+        <PrimaryKeys>
+          <ColumnName name="MESSAGEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="ATTACHMENTMAILID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="MARKS_R01">
+      <Details primary_table="SUBJECT" foreign_table="MARKS">
+        <PrimaryKeys>
+          <ColumnName name="SUBJID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="SUBJID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="MUSERID_FK">
+      <Details primary_table="USERDETAILS" foreign_table="MARKS">
+        <PrimaryKeys>
+          <ColumnName name="USERID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="USERID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="BBB">
+      <Details primary_table="USERDETAILS" foreign_table="OUTBOX_MAILS">
+        <PrimaryKeys>
+          <ColumnName name="USERID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="TOMAILID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="OUTBOX_MAILS_R01">
+      <Details primary_table="USERDETAILS" foreign_table="OUTBOX_MAILS">
+        <PrimaryKeys>
+          <ColumnName name="USERID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="FROMMAILID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="OUTBOX_MAIL_ATTACHMENT_R01">
+      <Details primary_table="OUTBOX_MAILS" foreign_table="OUTBOX_MAIL_ATTACHMENT">
+        <PrimaryKeys>
+          <ColumnName name="MESSAGEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="ATTACHMENTMAILID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="AID_PSID_FK">
+      <Details primary_table="SUBJECT" foreign_table="QPAPER">
+        <PrimaryKeys>
+          <ColumnName name="SUBJID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="SUBJIDREF" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="PUSERID_FK">
+      <Details primary_table="USERDETAILS" foreign_table="QPAPER">
+        <PrimaryKeys>
+          <ColumnName name="USERID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="USERIDREF" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="AID_PCID_FK">
+      <Details primary_table="COURSE" foreign_table="QPAPER">
+        <PrimaryKeys>
+          <ColumnName name="COURSEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="COURSEIDREF" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="WID_FK">
+      <Details primary_table="USERDETAILS" foreign_table="QUERY">
+        <PrimaryKeys>
+          <ColumnName name="USERID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="USERIDREF" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="UQID_FK">
+      <Details primary_table="QUERY" foreign_table="SOLUTION">
+        <PrimaryKeys>
+          <ColumnName name="QUERYID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="QUERYIDREF" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="STUDENTFEERECORD_R01">
+      <Details primary_table="USERDETAILS" foreign_table="STUDENTFEERECORD">
+        <PrimaryKeys>
+          <ColumnName name="USERID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="STUDENTID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="CIDREF_FK">
+      <Details primary_table="COURSE" foreign_table="SUBJECT">
+        <PrimaryKeys>
+          <ColumnName name="COURSEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="COURSEIDREF" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="TRANSACTION_R01">
+      <Details primary_table="ACCOUNTDETAILS" foreign_table="TRANSACTION">
+        <PrimaryKeys>
+          <ColumnName name="ACCNO" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="ACCNO" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="USERDETAILS_R01">
+      <Details primary_table="COURSE" foreign_table="USERDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="COURSEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="COURSEID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+  </Relationships>
+</ERDiagram>
+

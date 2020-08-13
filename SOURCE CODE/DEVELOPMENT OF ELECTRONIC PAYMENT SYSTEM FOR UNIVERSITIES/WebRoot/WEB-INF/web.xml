@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InitServlet</servlet-name>
+    <servlet-class>com.college.Util.InitServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/config/system.properties</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  
+   <servlet>
+    <servlet-name>LoginAction</servlet-name>
+    <servlet-class>com.college.Action.LoginAction</servlet-class>
+  </servlet>
+  <servlet>
+    
+    <servlet-name>ExportXLS</servlet-name>
+    <servlet-class>com.college.Action.ExportXLS</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExportXLS</servlet-name>
+    <url-pattern>/ExportXLS</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InitServlet</servlet-name>
+    <url-pattern>/initservlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+   <servlet>
+    
+    <servlet-name>ViewCoursesAction</servlet-name>
+    <servlet-class>com.college.Action.ViewCoursesAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>AddCourseAction</servlet-name>
+    <servlet-class>com.college.Action.AddCourseAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>AddDepartmentAction</servlet-name>
+    <servlet-class>com.college.Action.AddDepartmentAction</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddBranchAction</servlet-name>
+    <servlet-class>com.college.Action.AddBranchAction</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddFeeAction</servlet-name>
+    <servlet-class>com.college.Action.AddFeeAction</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddFacultySubjectAction</servlet-name>
+    <servlet-class>com.college.Action.AddFacultySubjectAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>CancelCourseAction</servlet-name>
+    <servlet-class>com.college.Action.CancelCourseAction</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>CancelDepartmentAction</servlet-name>
+    <servlet-class>com.college.Action.CancelDepartmentAction</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>CancelFeeAction</servlet-name>
+    <servlet-class>com.college.Action.CancelFeeAction</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>CancelBranchAction</servlet-name>
+    <servlet-class>com.college.Action.CancelBranchAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>UpdateCourseAction</servlet-name>
+    <servlet-class>com.college.Action.UpdateCourseAction</servlet-class>
+  </servlet>
+  
+   <servlet>
+    <servlet-name>UpdateBranchAction</servlet-name>
+    <servlet-class>com.college.Action.UpdateBranchAction</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>UpdateDepartmentAction</servlet-name>
+    <servlet-class>com.college.Action.UpdateDepartmentAction</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>UpdateFeeAction</servlet-name>
+    <servlet-class>com.college.Action.UpdateFeeAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>UploadFeeAction</servlet-name>
+    <servlet-class>com.college.Action.UploadFeeAction</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>AddSubjectAction</servlet-name>
+    <servlet-class>com.college.Action.AddSubjectAction</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CancelSubjectAction</servlet-name>
+    <servlet-class>com.college.Action.CancelSubjectAction</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateSubjectAction</servlet-name>
+    <servlet-class>com.college.Action.UpdateSubjectAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>ViewSubjectAction</servlet-name>
+    <servlet-class>com.college.Action.ViewSubjectAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>ViewDepartmentAction</servlet-name>
+    <servlet-class>com.college.Action.ViewDepartmentAction</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ViewBranchAction</servlet-name>
+    <servlet-class>com.college.Action.ViewBranchAction</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ViewFeeAction</servlet-name>
+    <servlet-class>com.college.Action.ViewFeeAction</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ViewStudentFeeAction</servlet-name>
+    <servlet-class>com.college.Action.ViewStudentFeeAction</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ViewUpdateCourseAction</servlet-name>
+    <servlet-class>com.college.Action.ViewUpdateCourseAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>ViewUpdateDepartmentAction</servlet-name>
+    <servlet-class>com.college.Action.ViewUpdateDepartmentAction</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ViewUpdateBranchAction</servlet-name>
+    <servlet-class>com.college.Action.ViewUpdateBranchAction</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ViewUpdateFeeAction</servlet-name>
+    <servlet-class>com.college.Action.ViewUpdateFeeAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>ViewUpdateSubjectAction</servlet-name>
+    <servlet-class>com.college.Action.ViewUpdateSubjectAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>RegisterAction</servlet-name>
+    <servlet-class>com.college.Action.RegisterAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>ChekUserAction</servlet-name>
+    <servlet-class>com.college.Action.ChekUserAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>ChekBalAction</servlet-name>
+    <servlet-class>com.college.Action.ChekBalAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>ViewEmployeesAction</servlet-name>
+    <servlet-class>com.college.Action.ViewEmployeesAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterStudentAction</servlet-name>
+    <servlet-class>com.college.Action.RegisterStudentAction</servlet-class>
+  </servlet>
+  <servlet>
+     <servlet-name>RegisterFacultyAction</servlet-name>
+    <servlet-class>com.college.Action.RegisterFacultyAction</servlet-class>
+  </servlet>
+  <servlet>
+     <servlet-name>ViewStudentsAction</servlet-name>
+    <servlet-class>com.college.Action.ViewStudentsAction</servlet-class>
+  </servlet>
+
+ <servlet>
+     <servlet-name>ViewExamScheduleAction</servlet-name>
+    <servlet-class>com.college.Action.ViewExamScheduleAction</servlet-class>
+  </servlet>
+   <servlet>
+     <servlet-name>LogoutAction</servlet-name>
+    <servlet-class>com.college.Action.LogoutAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+     <servlet-name>GetSubjectAction</servlet-name>
+    <servlet-class>com.college.Action.GetSubjectAction</servlet-class>
+  </servlet>
+  <servlet>
+     <servlet-name>ExamScheduleAction</servlet-name>
+    <servlet-class>com.college.Action.ExamScheduleAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+     <servlet-name>UploadQpaperAction</servlet-name>
+    <servlet-class>com.college.Action.UploadQpaperAction</servlet-class>
+  </servlet>
+  
+  
+  <servlet>
+     <servlet-name>ViewQpaperAction</servlet-name>
+    <servlet-class>com.college.Action.ViewQpaperAction</servlet-class>
+  </servlet>
+  
+   <servlet>
+     <servlet-name>NotificationAction</servlet-name>
+    <servlet-class>com.college.Action.NotificationAction</servlet-class>
+  </servlet>
+   <servlet>
+     <servlet-name>ViewNotificationAction</servlet-name>
+    <servlet-class>com.college.Action.ViewNotificationAction</servlet-class>
+  </servlet>
+  <servlet>
+     <servlet-name>ViewQueriesAction</servlet-name>
+    <servlet-class>com.college.Action.ViewQueriesAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+     <servlet-name>ViewQueryStatusAction</servlet-name>
+    <servlet-class>com.college.Action.ViewQueryStatusAction</servlet-class>
+  </servlet>
+  
+  
+  <servlet>
+     <servlet-name>ViewSolutionAction</servlet-name>
+    <servlet-class>com.college.Action.ViewSolutionAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+     <servlet-name>DeleteFeedbackAction</servlet-name>
+    <servlet-class>com.college.Action.DeleteFeedbackAction</servlet-class>
+  </servlet>
+   <servlet>
+     <servlet-name>PostQueryAction</servlet-name>
+    <servlet-class>com.college.Action.PostQueryAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+     <servlet-name>PostSolutionAction</servlet-name>
+    <servlet-class>com.college.Action.PostSolutionAction</servlet-class>
+  </servlet>
+  <servlet>
+     <servlet-name>ViewFeedBackAction</servlet-name>
+    <servlet-class>com.college.Action.ViewFeedBackAction</servlet-class>
+  </servlet>
+  
+   <servlet>
+     <servlet-name>GetFeedbackAction</servlet-name>
+    <servlet-class>com.college.Action.GetFeedbackAction</servlet-class>
+  </servlet>
+  
+  
+  
+   <servlet>
+     <servlet-name>GetQueryAction</servlet-name>
+    <servlet-class>com.college.Action.GetQueryAction</servlet-class>
+  </servlet>
+   <servlet>
+     <servlet-name>AddFeedbackAction</servlet-name>
+    <servlet-class>com.college.Action.AddFeedbackAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetStudentsAction</servlet-name>
+    <servlet-class>com.college.Action.GetStudentsAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetExamAction</servlet-name>
+    <servlet-class>com.college.Action.GetExamAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetCourseAction</servlet-name>
+    <servlet-class>com.college.Action.GetCourseAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetCourseNameAction</servlet-name>
+    <servlet-class>com.college.Action.GetCourseNameAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetStudentCourseAction</servlet-name>
+    <servlet-class>com.college.Action.GetStudentCourseAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddMarksAction</servlet-name>
+    <servlet-class>com.college.Action.AddMarksAction</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ViewMarksAction</servlet-name>
+    <servlet-class>com.college.Action.ViewMarksAction</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ViewFacultySubjectsAction</servlet-name>
+    <servlet-class>com.college.Action.ViewFacultySubjectsAction</servlet-class>
+  </servlet>
+
+ <servlet>
+    <servlet-name>ViewFacultiesAction</servlet-name>
+    <servlet-class>com.college.Action.ViewFacultiesAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>ChangePasswordAction</servlet-name>
+    <servlet-class>com.college.Action.ChangePasswordAction</servlet-class>
+  </servlet>
+
+ <servlet>
+    <servlet-name>DepositeAction</servlet-name>
+    <servlet-class>com.college.Action.DepositeAction</servlet-class>
+  </servlet>
+  
+  
+   <servlet>
+    <servlet-name>GetBalanceAction</servlet-name>
+    <servlet-class>com.college.Action.GetBalanceAction</servlet-class>
+  </servlet>
+ 
+ <servlet>
+    <servlet-name>GetFeeInfoAction</servlet-name>
+    <servlet-class>com.college.Action.GetFeeInfoAction</servlet-class>
+  </servlet>
+  <servlet>
+   
+    <servlet-name>ViewAllStudentFeeAction</servlet-name>
+    <servlet-class>com.college.Action.ViewAllStudentFeeAction</servlet-class>
+  </servlet>
+
+  <servlet>
+		
+		<servlet-name>SendToMobile</servlet-name>
+		<servlet-class>
+		SendToMobile</servlet-class>
+	</servlet>
+	<servlet>
+		
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>
+		LoginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		
+		<servlet-name>GetMessageExample</servlet-name>
+		<servlet-class>
+		GetMessageExample</servlet-class>
+	</servlet>
+	<servlet>
+		
+		<servlet-name>signinpage</servlet-name>
+		<servlet-class>
+		signinpage</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SendToMobile</servlet-name>
+		<url-pattern>/SendToMobile</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/loginverification</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetMessageExample</servlet-name>
+		<url-pattern>/GetMessageExample</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>signinpage</servlet-name>
+		<url-pattern>/signinpage</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	
+	
+	
+	
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>DeleteMailsIDsAction</servlet-name>
+		<servlet-class>com.college.Action.DeleteMailsIDsAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>ComposeMailAction</servlet-name>
+		<servlet-class>com.college.Action.ComposeMailAction</servlet-class>
+	</servlet>
+
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>ComposeAppMailAction</servlet-name>
+		<servlet-class>com.college.Action.ComposeAppMailAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>DeleteMailsAction</servlet-name>
+		<servlet-class>com.college.Action.DeleteMailsAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>OutboxAction</servlet-name>
+		<servlet-class>com.college.Action.OutboxAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>SendMailAction</servlet-name>
+		<servlet-class>com.college.Action.SendMailAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>ViewMailBody</servlet-name>
+		<servlet-class>com.college.Action.ViewMailBody</servlet-class>
+	</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ViewMailAttachmentAction</servlet-name>
+    <servlet-class>com.college.Action.ViewMailAttachmentAction</servlet-class>
+  </servlet>
+	
+  
+ <servlet-mapping>
+    <servlet-name>GetFeeInfoAction</servlet-name>
+    <url-pattern>/GetFeeInfoAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>GetBalanceAction</servlet-name>
+    <url-pattern>/GetBalanceAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DepositeAction</servlet-name>
+    <url-pattern>/DepositeAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AddFeedbackAction</servlet-name>
+    <url-pattern>/AddFeedbackAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>GetQueryAction</servlet-name>
+    <url-pattern>/GetQueryAction</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet-mapping>
+    <servlet-name>GetFeedbackAction</servlet-name>
+    <url-pattern>/GetFeedbackAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>ViewFeedBackAction</servlet-name>
+    <url-pattern>/ViewFeedBackAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>PostSolutionAction</servlet-name>
+    <url-pattern>/PostSolutionAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>PostQueryAction</servlet-name>
+    <url-pattern>/PostQueryAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>DeleteFeedbackAction</servlet-name>
+    <url-pattern>/DeleteFeedbackAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>ViewSolutionAction</servlet-name>
+    <url-pattern>/ViewSolutionAction</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet-mapping>
+    <servlet-name>ViewQueryStatusAction</servlet-name>
+    <url-pattern>/ViewQueryStatusAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>ViewQueriesAction</servlet-name>
+    <url-pattern>/ViewQueriesAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>ViewNotificationAction</servlet-name>
+    <url-pattern>/ViewNotificationAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>NotificationAction</servlet-name>
+    <url-pattern>/NotificationAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewQpaperAction</servlet-name>
+    <url-pattern>/ViewQpaperAction</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet-mapping>
+    <servlet-name>UploadQpaperAction</servlet-name>
+    <url-pattern>/UploadQpaperAction</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet-mapping>
+    <servlet-name>ExamScheduleAction</servlet-name>
+    <url-pattern>/ExamScheduleAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>GetSubjectAction</servlet-name>
+    <url-pattern>/GetSubjectAction</url-pattern>
+  </servlet-mapping>
+  
+   <servlet-mapping>
+    <servlet-name>ViewExamScheduleAction</servlet-name>
+    <url-pattern>/ViewExamScheduleAction</url-pattern>
+  </servlet-mapping>
+  
+   <servlet-mapping>
+    <servlet-name>LogoutAction</servlet-name>
+    <url-pattern>/LogoutAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>ViewEmployeesAction</servlet-name>
+    <url-pattern>/ViewEmployeesAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChekUserAction</servlet-name>
+    <url-pattern>/ChekUserAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChekBalAction</servlet-name>
+    <url-pattern>/ChekBalAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterAction</servlet-name>
+    <url-pattern>/RegisterAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewUpdateSubjectAction</servlet-name>
+    <url-pattern>/ViewUpdateSubjectAction</url-pattern>
+  </servlet-mapping>
+  
+   <servlet-mapping>
+    <servlet-name>ViewUpdateCourseAction</servlet-name>
+    <url-pattern>/ViewUpdateCourseAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>ViewUpdateDepartmentAction</servlet-name>
+    <url-pattern>/ViewUpdateDepartmentAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewUpdateBranchAction</servlet-name>
+    <url-pattern>/ViewUpdateBranchAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewUpdateFeeAction</servlet-name>
+    <url-pattern>/ViewUpdateFeeAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>UpdateDepartmentAction</servlet-name>
+    <url-pattern>/UpdateDepartmentAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateBranchAction</servlet-name>
+    <url-pattern>/UpdateBranchAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateFeeAction</servlet-name>
+    <url-pattern>/UpdateFeeAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>UploadFeeAction</servlet-name>
+    <url-pattern>/UploadFeeAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewSubjectAction</servlet-name>
+    <url-pattern>/ViewSubjectAction</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet-mapping>
+    <servlet-name>ViewDepartmentAction</servlet-name>
+    <url-pattern>/ViewDepartmentAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewBranchAction</servlet-name>
+    <url-pattern>/ViewBranchAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewFeeAction</servlet-name>
+    <url-pattern>/ViewFeeAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>ViewStudentFeeAction</servlet-name>
+    <url-pattern>/ViewStudentFeeAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateSubjectAction</servlet-name>
+    <url-pattern>/UpdateSubjectAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CancelSubjectAction</servlet-name>
+    <url-pattern>/CancelSubjectAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>CancelBranchAction</servlet-name>
+    <url-pattern>/CancelBranchAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CancelDepartmentAction</servlet-name>
+    <url-pattern>/CancelDepartmentAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CancelFeeAction</servlet-name>
+    <url-pattern>/CancelFeeAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddSubjectAction</servlet-name>
+    <url-pattern>/AddSubjectAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddBranchAction</servlet-name>
+    <url-pattern>/AddBranchAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddDepartmentAction</servlet-name>
+    <url-pattern>/AddDepartmentAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddFeeAction</servlet-name>
+    <url-pattern>/AddFeeAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddFacultySubjectAction</servlet-name>
+    <url-pattern>/AddFacultySubjectAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>UpdateCourseAction</servlet-name>
+    <url-pattern>/UpdateCourseAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>CancelCourseAction</servlet-name>
+    <url-pattern>/CancelCourseAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AddCourseAction</servlet-name>
+    <url-pattern>/AddCourseAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>ViewCoursesAction</servlet-name>
+    <url-pattern>/ViewCoursesAction</url-pattern>
+  </servlet-mapping>
+  
+   <servlet-mapping>
+    <servlet-name>LoginAction</servlet-name>
+    <url-pattern>/LoginAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterFacultyAction</servlet-name>
+    <url-pattern>/RegisterFacultyAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewFacultiesAction</servlet-name>
+    <url-pattern>/ViewFacultiesAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterStudentAction</servlet-name>
+    <url-pattern>/RegisterStudentAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewStudentsAction</servlet-name>
+    <url-pattern>/ViewStudentsAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetStudentsAction</servlet-name>
+    <url-pattern>/GetStudentsAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetExamAction</servlet-name>
+    <url-pattern>/GetExamAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>GetCourseNameAction</servlet-name>
+    <url-pattern>/GetCourseNameAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetCourseAction</servlet-name>
+    <url-pattern>/GetCourseAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetStudentCourseAction</servlet-name>
+    <url-pattern>/GetStudentCourseAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddMarksAction</servlet-name>
+    <url-pattern>/AddMarksAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewMarksAction</servlet-name>
+    <url-pattern>/ViewMarksAction</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>ViewFacultySubjectsAction</servlet-name>
+    <url-pattern>/ViewFacultySubjectsAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangePasswordAction</servlet-name>
+    <url-pattern>/ChangePasswordAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewAllStudentFeeAction</servlet-name>
+    <url-pattern>/ViewAllStudentFeeAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+		<servlet-name>DeleteMailsIDsAction</servlet-name>
+		<url-pattern>/DeleteMailsIDsAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ComposeMailAction</servlet-name>
+		<url-pattern>/ComposeMailAction</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet-mapping>
+		<servlet-name>ComposeAppMailAction</servlet-name>
+		<url-pattern>/ComposeAppMailAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteMailsAction</servlet-name>
+		<url-pattern>/DeleteMailsAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>OutboxAction</servlet-name>
+		<url-pattern>/OutboxAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SendMailAction</servlet-name>
+		<url-pattern>/SendMailAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ViewMailBody</servlet-name>
+		<url-pattern>/ViewMailBody</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewMailAttachmentAction</servlet-name>
+    <url-pattern>/ViewMailAttachmentAction</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>./Home.jsp</welcome-file>
+  </welcome-file-list>
+
+</web-app>
